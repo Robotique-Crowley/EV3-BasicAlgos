@@ -1,6 +1,6 @@
 # La sécurité des moteurs
 
-## Comprendre `stall_example`
+## Comprendre stall_example
 
 La ligne critique dans `stall_example` est celle-ci :
 
@@ -15,7 +15,7 @@ Le moteur utilise `run_until_stalled` comme commande d'opération. Cette command
 
 Finalement, `run_until_stalled` renvoie la valeur de l'angle du moteur mesuré lorsqu'il s'arrête et on conserve cette valeur dans une variable que j'ai nommée `stall_angle`. J'utilise cette angle comme référence pour des mouvements subséquents du moteur.
 
-## Comprendre `manual_stall`
+## Comprendre manual_stall
 
 Dans cette exemple, on utilise des commandes moteurs plus directes, mais en échange nous devons spécifier la logique d'arrêt nous-même. Cela se passe dans une boucle while :
 
@@ -52,3 +52,7 @@ Tourne le moteur dans le sens opposé jusqu'à 95% de stall_angle
 ```
 
 J'utilise 95% de `stall_angle` et non 100% pour éviter de forcer le moteur contre l'objet qui l'avait bloqué. Vous devrez observer que sa position finale est, à toutes fins pratiques, exactement la même que s'il avait frappé la barrière mais l'usure sur le moteur est éliminé.
+
+## Vos propres programmes
+
+La partie du code que vous devrez utiliser dans vos propres algorithmes est la partie qui prévient l'opération du moteur quand il est bloqué (ce qui est expliqué dans les sections [Comprendre stall_example](#comprendre-stall_example) et [Comprendre manual_stall](#comprendre-manual_stall)). La façon que vous placez ça dans le reste de votre logique (dans votre propre pseudocode) dépend de ce que vous tentez de faire avec votre robot.
