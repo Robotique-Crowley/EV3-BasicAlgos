@@ -10,14 +10,14 @@ stall_angle = motor.run_until_stalled(SPEED, then = Stop.HOLD, duty_limit = 75)
 
 Le moteur utilise `run_until_stalled` comme commande d'opération. Cette commande prend 1 paramètre obligatoire et 2 paramètres nommés/optionnels :
 * la vitesse de rotation du moteur (obligatoire)
-* quoi faire quand le moteur arrête (le paramètre optionnel `then`). Par défaut c'est `Stop.COAST` (qui laisse le moteur tourné librement). Ici, j'ai choisi `Stop.HOLD` (qui maintient la position du moteur) parce que je veux saisir l'angle d'arrêt avec précision. Ce serait aussi une bonne option pour un bras robotique.
+* quoi faire quand le moteur arrête (le paramètre optionnel `then`). Par défaut c'est `Stop.COAST` (qui laisse le moteur tourner librement). Ici, j'ai choisi `Stop.HOLD` (qui maintient la position du moteur) parce que je veux saisir l'angle d'arrêt avec précision. Ce serait aussi une bonne option pour un bras robotique.
 * la puissance maximale du moteur durant l'opération (le paramètre optionnel `duty_limit`). Par défaut, aucune valeur n'est assignée, mais j'ai spécifié 75 (pour 75%) afin de protéger le moteur davantage.
 
 Finalement, `run_until_stalled` renvoie la valeur de l'angle du moteur mesuré lorsqu'il s'arrête et on conserve cette valeur dans une variable que j'ai nommée `stall_angle`. J'utilise cette angle comme référence pour des mouvements subséquents du moteur.
 
 ## Comprendre manual_stall
 
-Dans cette exemple, on utilise des commandes moteurs plus directes, mais en échange nous devons spécifier la logique d'arrêt nous-même. Cela se passe dans une boucle while :
+Dans cet exemple, on utilise des commandes moteurs plus directes, mais en échange nous devons spécifier la logique d'arrêt nous-même. Cela se passe dans une boucle while :
 
 ```python
 while True  :
@@ -39,7 +39,7 @@ Pour enregistrer l'angle à cette position bloquée, on mesure l'angle avec `mot
 
 ## La reste de chaque exemple
 
-Le reste de chaque exemple est identique. Voici le pseudocode :
+Le reste de chaque exemple est identique. Voici le pseudocode qui s'applique aux deux exemples :
 
 ```
 Remet l'angle du moteur à 0
