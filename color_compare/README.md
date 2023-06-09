@@ -39,7 +39,7 @@ yellow = (55, 33, 38)
 blue = (23, 54, 153) 
 ```
 
->Notez que c'est print(color_sensor.rgb()) - et non cs.rgb() - parce que le capteur couleur est nommé color_sensor dans le programme
+>Notez que c'est `print(color_sensor.rgb())` - et non `cs.rgb()` - parce que le capteur couleur est nommé `color_sensor` dans le programme
 
 ### Comparer des tuples
 
@@ -99,7 +99,7 @@ Dans Python, comme la plupart des langages incluant Arduino, les **index commenc
 
 Une façon de générer ces valeurs dans Python est avec la fonction `range(n)`, où `n` est le nombre de valeurs voulues. Pour les tuples RGB, on veut trois valeurs alors on utiliserait `range(3)`, ce qui génère les valeurs 0, 1 et 2.
 
-Pour accéder à une valeur spécifique dans un tuple, on utilise la notation `nom[index]`, p.ex. : `rgb_measured[0]` serait la première valeur dans le tuple `rgb_measured`, soit la valeur pour le rouge.
+Pour accéder à une valeur spécifique dans un tuple, on utilise la notation `nom[index]`, p.ex. : `rgb_measured[0]` est la première valeur dans le tuple `rgb_measured`.
 
 Finalement, on peut utiliser une variable pour stocker la valeur de l'index. Souvent on utilise la lettre `i` comme variable d'index.
 
