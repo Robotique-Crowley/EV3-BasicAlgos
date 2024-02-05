@@ -2,7 +2,7 @@
 
 """
 Idéalement testez ce code avec un seul moteur auquel vous avez attaché un
-long poutre. Comme ça, le bras bloquera sur le corp du moteur dans les deux
+long fléau. Comme ça, le fléau bloquera sur le corp du moteur dans les deux
 directions (ou sur votre main).
 
 C'EST IMPORTANT DE NE PAS OPÉRER UN MOTEUR LORSQU'IL EST BLOQUÉ
