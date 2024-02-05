@@ -22,7 +22,7 @@ blue = (23, 54, 153)
 
 # Fonctions
 
-def same_color_as(rgb_target: (int, int, int)) -> bool:
+def same_color_as(rgb_target: tuple[int, int, int]) -> bool:
     """
     Compare les valeurs rgb du capteur avec une couleur de référence, 
     rgb_target, qui est un tuple (r, g, b).
